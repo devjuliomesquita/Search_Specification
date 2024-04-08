@@ -26,7 +26,7 @@ public class Student {
     @JoinColumn(name = "address_id", referencedColumnName = "address_id")
     private Address address;
 
-    @OneToMany(mappedBy = "studentId", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JsonManagedReference
     private Set<Subject> subjects;
 

@@ -1,0 +1,14 @@
+liquibase:
+  changeLogFile: ${project.basedir}/src/main/resources/liquibase/master.xml
+  diffChangeLogFile: ${project.basedir}/src/main/resources/liquibase/changelog/${maven.build.timestamp}_changelog.xml
+  outputChangeLogFile: ${project.basedir}/src/main/resources/liquibase/changelog/${maven.build.timestamp}_changelog.xml
+  driver: org.h2.Driver
+  url: jdbc:h2:mem:search_specification
+  username: sa
+  password: password
+  referenceDriver: org.h2.Driver
+  referenceUrl: jdbc:h2:mem:search_specification
+  referenceUsername: sa
+  referencePassword: password
+  goal: diff
+  verbose: true
